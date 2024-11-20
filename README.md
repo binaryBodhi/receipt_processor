@@ -26,17 +26,38 @@ Receipt Processor is a web service for processing receipts and calculating point
 
 #### Running the Application with Docker
 
-1. Clone the Repository:
-   `git clone <repository_url>`
+1. Clone the Repository:  
+   `git clone <repository_url>`  
    `cd <repository_folder> `
 
-2. Build the Docker Image:
+2. Build the Docker Image:  
    `docker build -t receipt-processor .`
 
-3. Run the Docker Container:
+3. Run the Docker Container:  
    `docker run -p 5001:5000 receipt-processor`
 
 4. Access the Application:
+
+-   The service will be accessible at http://localhost:5001.
+
+#### Running the Application without Docker
+
+1. Clone the Repository:  
+   `git clone <repository_url>`  
+   `cd <repository_folder>`
+
+2. Create a Virtual Environment:  
+   `python -m venv venv`  
+   `source venv/bin/activate` # Linux/Mac  
+   `venv\Scripts\activate` # Windows
+
+3. Install dependencies:  
+   `pip install -r requirements.txt`
+
+4. Run the Application:  
+   `python app.py`
+
+5. Access the Application:
 
 -   The service will be accessible at http://localhost:5001.
 
