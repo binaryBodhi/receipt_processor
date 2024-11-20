@@ -34,7 +34,7 @@ cd <repository_folder> `
    `docker build -t receipt-processor .`
 
 3. Run the Docker Container:
-   `docker run -p 5000:5000 receipt-processor`
+   `docker run -p 5001:5000 receipt-processor`
 
 4. Access the Application:
 
