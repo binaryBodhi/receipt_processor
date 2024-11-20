@@ -27,8 +27,8 @@ Receipt Processor is a web service for processing receipts and calculating point
 #### Running the Application with Docker
 
 1. Clone the Repository:
-   `git clone <repository_url>
-cd <repository_folder> `
+   `git clone <repository_url>`
+   `cd <repository_folder> `
 
 2. Build the Docker Image:
    `docker build -t receipt-processor .`
@@ -38,4 +38,36 @@ cd <repository_folder> `
 
 4. Access the Application:
 
--   The service will be accessible at http://localhost:5000.
+-   The service will be accessible at http://localhost:5001.
+
+## Testing the Application
+
+Using Postman
+
+-   Import the API requests into Postman:
+-   Create a POST request for http://localhost:5001/receipts/process.
+-   Create a GET request for http://localhost:5001/receipts/{id}/points.
+-   Follow the API examples to test the endpoints.
+
+### API Examples
+
+1. `'{
+    "retailer": "M&M Corner Market",
+    "purchaseDate": "2023-11-18",
+    "purchaseTime": "14:30",
+    "items": [
+        {"shortDescription": "Bread", "price": "3.49"},
+        {"shortDescription": "Milk", "price": "1.99"}
+    ],
+    "total": "5.48"
+}'`
+2. `{
+    "retailer": "Walgreens",
+    "purchaseDate": "2022-01-02",
+    "purchaseTime": "08:13",
+    "total": "2.65",
+    "items": [
+        {"shortDescription": "Pepsi - 12-oz", "price": "1.25"},
+        {"shortDescription": "Dasani", "price": "1.40"}
+    ]
+}`
